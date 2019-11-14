@@ -1,11 +1,11 @@
-import json
-
-
 class Node(object):
     def __init__(self, value):
         self.left = None
         self.right = None
         self.value = value
+
+    def __str__(self):
+        return '('+str(self.left)+':L ' + "V:" + str(self.value) + " R:" + str(self.right)+')'
 
 
 class BinarySearchTree(object):
@@ -113,15 +113,4 @@ class BinarySearchTree(object):
                 'right': None if node.right is None else self.traverse(node.right)}
         return tree
 
-# a = BinarySearchTree(9)
-# a.insert(4)
-# a.insert(6)
-# a.insert(20)
-# a.insert(617)
-# a.insert(15)
-# a.insert(1)
-# print(a.look_up(20))
-# b = a.traverse(a.root)
-# print(json.dumps(b))
-# print(a.remove(170))
-# print(json.dumps(a.traverse(a.root)))
+
