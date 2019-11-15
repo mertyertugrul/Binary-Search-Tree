@@ -5,6 +5,7 @@ class Graph(object):
 
     def add_vertex(self, node):
         self.adjacent_list[node] = []
+        self.number_of_nodes += 1
 
     def add_edge(self, node1, node2):
         # undirected graph
